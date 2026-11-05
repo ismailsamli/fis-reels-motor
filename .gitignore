@@ -1,0 +1,10 @@
+fonts/
+grain*.png
+_*.html
+_*.mp4
+_*.wav
+cikti/*
+!cikti/.gitkeep
+ses/*
+!ses/.gitkeep
+__pycache__/

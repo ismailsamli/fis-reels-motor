@@ -1,0 +1,55 @@
+/* Sade Reels motoru — renkleri :root içinden değiştir. --or = vurgu rengi. Gradient kullanma. */
+@import url("fonts/manrope/500.css");
+@import url("fonts/manrope/700.css");
+@import url("fonts/manrope/800.css");
+
+:root {
+  --bg: #f4f5f7;      /* zemin */
+  --paper: #f4f5f7;   /* içerik alanı (zeminle aynı = tam ekran düz) */
+  --ink: #15181c;     /* yazı */
+  --or: #2f6bff;      /* vurgu */
+  --grey: #8a929b;    /* soluk yazı */
+  --card: #ffffff;    /* kart zemini */
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--bg); }
+body { font-family: "Manrope", system-ui, sans-serif; color: var(--ink); }
+
+#cam { position: absolute; inset: 0; transform-origin: 540px 900px; }
+#paper { position: absolute; left: 70px; top: 140px; width: 940px; height: 1620px; }
+
+.top { position: absolute; left: 66px; right: 66px; top: 70px; display: flex; justify-content: space-between; align-items: baseline;
+  font-weight: 800; font-size: 34px; letter-spacing: .5px; }
+.top #ctr { font-weight: 700; font-size: 28px; color: var(--grey); }
+#track { position: absolute; left: 66px; right: 66px; top: 135px; height: 8px; border-radius: 8px; background: #dde1e6; overflow: hidden; }
+#prog { height: 100%; width: 0; background: var(--or); border-radius: 8px; }
+.chip { position: absolute; left: 66px; top: 180px; font-weight: 700; font-size: 26px; letter-spacing: 2px; color: var(--grey); }
+
+#stage { position: absolute; left: 0; right: 0; top: 300px; height: 900px; }
+.scene { position: absolute; inset: 0; opacity: 0; }
+
+#cap { position: absolute; left: 66px; right: 66px; top: 1230px; min-height: 96px; background: var(--card); color: var(--ink);
+  border-radius: 22px; box-shadow: 0 6px 18px rgba(20, 30, 40, .08);
+  font-weight: 700; font-size: 44px; line-height: 1.2; padding: 22px 28px; }
+#cap span { opacity: 0; }
+#cap span.on { opacity: 1; }
+#cap span.hl { color: var(--or); }
+
+.foot { position: absolute; left: 66px; right: 66px; top: 1440px; display: flex; justify-content: space-between;
+  font-weight: 700; font-size: 28px; color: var(--grey); }
+
+#grain { position: absolute; inset: 0; pointer-events: none; background-size: 1080px 1920px; opacity: .35; }
+
+/* sahne yardımcıları */
+.abs { position: absolute; }
+.big { font-weight: 800; font-size: 92px; line-height: 1.05; letter-spacing: -2px; }
+.mid { font-weight: 800; font-size: 60px; line-height: 1.1; }
+.sm { font-size: 30px; letter-spacing: 1px; }
+.or { color: var(--or); }
+.w { display: inline-block; transform-origin: 50% 80%; }
+.ctr { left: 0; right: 0; text-align: center; }
+.stamp { background: var(--or); color: #fff; font-weight: 800; padding: 12px 28px; border-radius: 999px; display: inline-block; }
+.tag { background: var(--ink); color: #fff; font-weight: 700; padding: 6px 18px; border-radius: 10px; display: inline-block; }
+svg { overflow: visible; }
+.stroke { fill: none; stroke: var(--ink); stroke-width: 12; stroke-linecap: round; stroke-linejoin: round; }
+.stroke.o { stroke: var(--or); }
